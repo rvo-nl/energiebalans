@@ -1,0 +1,298 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300);
+
+html {
+  width: 100%;
+  height: 100%;
+  /* font-family: 'RijksoverheidSans'; */
+  font-family: 'Open Sans', sans-serif;
+  user-select: none;
+}
+
+body {
+  margin: 0 auto 4em auto;
+  color: #333;
+  /* font-family: 'RijksoverheidSans'; */
+  background-color: #E8F0F4;
+  margin: 0;
+  height: 100%;
+  padding: 0;
+}
+
+p {
+  column-count: 2;
+  line-height: 24px;
+  padding: 20px;
+}
+
+h1 {
+  padding-left: 20px;
+  font-weight: normal;
+  font-size: 2.5em;
+}
+
+h2 {
+  padding-left: 20px;
+  margin-top: 2.5em;
+  font-weight: 100;
+}
+
+a {
+  color: #4078c0;
+  text-decoration: none;
+}
+
+a:hover,
+a:active {
+  text-decoration: underline;
+}
+
+.sankey {
+  /* background-color: white; */
+  border-radius: 7px;
+  position: relative;
+}
+
+#sankey {
+  height: 600px;
+}
+
+#try-sankey,
+#try {
+  height: 400px;
+}
+
+.source {
+  margin: 0.5em;
+  font-size: small;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: #555;
+}
+
+.source a {
+  color: #558;
+}
+
+svg .link {
+  opacity: 0.8;
+  fill: steelblue;
+}
+
+svg .link:hover {
+  opacity: 1;
+}
+
+svg g.sankey {
+  font-size: 10pt;
+}
+
+svg .node line {
+  stroke-width: 1px;
+  stroke: #000;
+}
+
+svg .node-type-process line {
+  stroke-width: 4px;
+  stroke: #888;
+}
+
+svg .group rect {
+  fill: #eee;
+  stroke: #bbb;
+  stroke-width: 0.5px;
+}
+
+svg .group text {
+  fill: #999;
+}
+
+
+
+/* 
+@font-face {
+  font-family: "RijksoverheidSans";
+  src: url("/fonts/ROsanswebtextregular.eot?") format("embedded-opentype"),
+    url("/fonts/ROsanswebtextregular.woff") format("opentype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "RijksoverheidSans";
+  src: url("/fonts/ROsanswebtextitalic.eot?") format("embedded-opentype"),
+    url("/fonts/ROsanswebtextitalic.woff") format("opentype");
+  font-style: italic;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "RijksoverheidSans";
+  src: url("/onts/ROsanswebtextbold.eot?") format("embedded-opentype"),
+    url("/fonts/ROsanswebtextbold.woff") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "RijksoverheidSerif";
+  src: url("/fonts/ROserifwebregular.eot?") format("embedded-opentype"),
+    url("/fonts/ROserifwebregular.woff") format("opentype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "RijksoverheidSerif";
+  src: url("/fonts/ROserifwebitalic.eot?") format("embedded-opentype"),
+    url("/fonts/ROserifwebitalic.woff") format("opentype");
+  font-style: italic;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "RijksoverheidSerif";
+  src: url("/fonts/ROserifwebbold.eot?") format("embedded-opentype"),
+    url("/fonts/ROserifwebbold.woff") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+} */
+
+
+
+.header {
+  background-color: #333;
+}
+
+.footer {
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+}
+
+.buttons {
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+}
+
+
+#timeline {
+  position: fixed;
+  width: 100%;
+  left: 70px;
+  top: 0px;
+  right: 0px;
+  height: 65px;
+  z-index: 4000000;
+}
+
+#map {
+  font-family: 'RijksoverheidSans';
+  height: 1000px;
+  background-color: white;
+}
+
+.introContainer {
+  margin-top: 200px;
+  margin-bottom: 0px;
+  width: 100%;
+  position: relative;
+}
+
+.grid line {
+  stroke-width: .5px;
+  stroke: '#000';
+  stroke-dasharray: 5;
+}
+
+.ontop {
+  z-index: 1000
+}
+
+#navigatieMenuContainer {
+  position: -webkit-sticky;
+  float: right;
+  position: sticky;
+  width: 290px;
+  top: 125px;
+}
+
+
+.contentContainer {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 100%;
+  background-color: white;
+  position: relative;
+}
+
+
+.assetsViewContainer {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 100%;
+  background-color: white;
+  position: relative;
+  height: 1150px;
+}
+
+.assetsViewMap {
+  position: absolute;
+  width: 100%;
+  height: 900px;
+  top: 200px;
+  background-color: white;
+  z-index: 100;
+}
+
+.assetsViewMapOverlay {
+  position: absolute;
+  top: 200px;
+  left: 0px;
+  z-index: 3000;
+  width: 100%;
+  height: 900px;
+  pointer-events: none;
+  z-index: 200000;
+}
+
+.assetsViewDialogOverlay {
+  position: absolute;
+  background-color: white;
+  z-index: 3000;
+  width: 100%;
+  margin: 0px;
+  height: 100%;
+  pointer-events: all;
+  z-index: 200010;
+  visibility: hidden;
+}
+
+.assetsViewHeader {
+  position: absolute;
+  top: 0px;
+  z-index: 200;
+  height: 100px;
+  width: 100%;
+  background-color: #546689;
+}
+
+.assetsViewFooter {
+  position: absolute;
+  top: 100px;
+  z-index: 200;
+  height: 100px;
+  width: 100%;
+}
+
+#mainContainer {
+  width: 100%;
+  height: 100%;
+  background-color: #ddd;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+  margin: 0 auto;
+}
